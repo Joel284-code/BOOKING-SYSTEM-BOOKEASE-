@@ -1,0 +1,537 @@
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.dashboard-container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   DASHBOARD HEADER
+========================================================= */
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #0f172a;
+}
+
+.dashboard-header p {
+    margin-top: 4px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    position: relative;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 20px rgba(15, 23, 42, .05);
+
+    overflow: hidden;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 30px rgba(15, 23, 42, .09);
+}
+
+.stat-card::after {
+    content: "";
+
+    position: absolute;
+
+    right: -25px;
+    bottom: -25px;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    background: rgba(37, 99, 235, .06);
+}
+
+.stat-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 21px;
+}
+
+.stat-card.success .stat-icon {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.stat-card.warning .stat-icon {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.stat-card.danger .stat-icon {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.stat-label {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.stat-value {
+    color: #0f172a;
+
+    font-size: 29px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+.stat-change {
+    margin-top: 8px;
+
+    font-size: 12px;
+    color: #64748b;
+}
+
+.stat-change.up {
+    color: #16a34a;
+}
+
+.stat-change.down {
+    color: #dc2626;
+}
+
+
+/* =========================================================
+   DASHBOARD GRID
+========================================================= */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(300px, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.dashboard-grid-full {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   DASHBOARD CARD
+========================================================= */
+
+.dashboard-card {
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 20px rgba(15, 23, 42, .05);
+
+    overflow: hidden;
+}
+
+.dashboard-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 20px;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.dashboard-card-header h2,
+.dashboard-card-header h3 {
+    margin: 0;
+
+    color: #0f172a;
+    font-size: 16px;
+}
+
+.dashboard-card-header a {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.dashboard-card-body {
+    padding: 20px;
+}
+
+
+/* =========================================================
+   RECENT BOOKINGS
+========================================================= */
+
+.recent-booking {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.recent-booking:last-child {
+    border-bottom: none;
+}
+
+.booking-customer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.booking-customer-info h4 {
+    margin: 0;
+
+    color: #334155;
+
+    font-size: 14px;
+}
+
+.booking-customer-info p {
+    margin-top: 2px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.quick-actions {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.quick-action {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+
+    background: #f8fafc;
+
+    color: #334155;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: .2s ease;
+}
+
+.quick-action:hover {
+    border-color: #bfdbfe;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+.quick-action-icon {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: #dbeafe;
+
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   CHART CONTAINER
+========================================================= */
+
+.chart-container {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 280px;
+}
+
+.chart-container canvas {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   ACTIVITY
+========================================================= */
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.activity-item {
+    display: flex;
+
+    gap: 12px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    flex: 0 0 35px;
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-content p {
+    margin: 0;
+
+    color: #334155;
+
+    font-size: 13px;
+}
+
+.activity-time {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.progress-wrapper {
+    margin-bottom: 18px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+}
+
+.progress-bar {
+    height: 8px;
+
+    background: #e2e8f0;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress-value {
+    height: 100%;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+}
+
+
+/* =========================================================
+   DASHBOARD WELCOME
+========================================================= */
+
+.welcome-card {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #1d4ed8
+        );
+
+    color: white;
+}
+
+.welcome-card h2 {
+    margin: 0 0 5px;
+
+    font-size: 24px;
+}
+
+.welcome-card p {
+    margin: 0;
+
+    color: #dbeafe;
+
+    font-size: 14px;
+}
+
+.welcome-card .btn {
+    background: white;
+    color: #1d4ed8;
+}
+
+
+/* =========================================================
+   FINANCIAL SUMMARY
+========================================================= */
+
+.finance-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.finance-item {
+    padding: 18px;
+
+    border-radius: 9px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+}
+
+.finance-item span {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.finance-item strong {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #0f172a;
+
+    font-size: 21px;
+}

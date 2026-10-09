@@ -1,0 +1,413 @@
+/* =========================================================
+   BOOKEASE RESPONSIVE STYLES
+========================================================= */
+
+
+/* =========================================================
+   LARGE TABLETS
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-summary {
+        position: static;
+    }
+
+    .finance-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .main-content {
+        margin-left: 70px;
+
+        padding: 22px;
+    }
+
+    .page-title {
+        font-size: 24px;
+    }
+
+    .form-grid-3 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .payment-methods {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        font-size: 14px;
+    }
+
+
+    /* -----------------------------------------------------
+       CONTAINERS
+    ----------------------------------------------------- */
+
+    .container {
+        width: 94%;
+    }
+
+    .container-fluid {
+        padding: 0 15px;
+    }
+
+
+    /* -----------------------------------------------------
+       MAIN CONTENT
+    ----------------------------------------------------- */
+
+    .main-content {
+        margin-left: 0;
+
+        padding: 18px 13px;
+
+        min-height:
+            calc(100vh - 64px);
+    }
+
+
+    /* -----------------------------------------------------
+       PAGE HEADER
+    ----------------------------------------------------- */
+
+    .page-header,
+    .dashboard-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 13px;
+    }
+
+    .page-title,
+    .dashboard-header h1 {
+        font-size: 22px;
+    }
+
+    .page-actions {
+        width: 100%;
+
+        flex-wrap: wrap;
+    }
+
+    .page-actions .btn {
+        flex: 1;
+    }
+
+
+    /* -----------------------------------------------------
+       STATISTICS
+    ----------------------------------------------------- */
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 18px;
+    }
+
+
+    /* -----------------------------------------------------
+       DASHBOARD
+    ----------------------------------------------------- */
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .welcome-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .finance-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* -----------------------------------------------------
+       FORMS
+    ----------------------------------------------------- */
+
+    .form-grid,
+    .form-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .form-full {
+        grid-column: auto;
+    }
+
+
+    /* -----------------------------------------------------
+       SEARCH
+    ----------------------------------------------------- */
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box input {
+        min-width: 0;
+
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       TABLE
+    ----------------------------------------------------- */
+
+    .table-container {
+        margin-left: -20px;
+
+        margin-right: -20px;
+
+        width: calc(100% + 40px);
+    }
+
+    .table {
+        min-width: 650px;
+    }
+
+
+    /* -----------------------------------------------------
+       BOOKING
+    ----------------------------------------------------- */
+
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-header h1 {
+        font-size: 22px;
+    }
+
+    .booking-steps {
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        gap: 35px;
+
+        padding-bottom: 8px;
+    }
+
+    .booking-step {
+        min-width: 80px;
+    }
+
+    .booking-steps::before {
+        display: none;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .date-time-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .time-slots {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .booking-details {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-methods {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-actions {
+        flex-direction: column;
+    }
+
+    .booking-actions .btn {
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       BOOKING LIST
+    ----------------------------------------------------- */
+
+    .booking-list-item {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .booking-list-actions {
+        width: 100%;
+    }
+
+    .booking-list-actions .btn {
+        flex: 1;
+    }
+
+
+    /* -----------------------------------------------------
+       MODAL
+    ----------------------------------------------------- */
+
+    .modal-overlay {
+        padding: 10px;
+    }
+
+    .modal {
+        max-height: 95vh;
+    }
+
+
+    /* -----------------------------------------------------
+       ALERT
+    ----------------------------------------------------- */
+
+    .alert {
+        font-size: 13px;
+    }
+
+
+    /* -----------------------------------------------------
+       FLASH
+    ----------------------------------------------------- */
+
+    .flash-container {
+        left: 12px;
+        right: 12px;
+
+        width: auto;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .main-content {
+        padding: 15px 10px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-header {
+        padding: 15px;
+    }
+
+    .page-title {
+        font-size: 20px;
+    }
+
+    .stat-value {
+        font-size: 25px;
+    }
+
+    .btn {
+        padding: 9px 13px;
+
+        font-size: 13px;
+    }
+
+    .time-slots {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .booking-summary-body {
+        padding: 15px;
+    }
+
+    .booking-card-body {
+        padding: 15px;
+    }
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+
+    .navbar,
+    .sidebar,
+    .page-actions,
+    .booking-actions,
+    .btn {
+        display: none !important;
+    }
+
+    .main-content {
+        margin-left: 0;
+
+        padding: 0;
+    }
+
+    body {
+        background: white;
+    }
+
+    .card,
+    .booking-card,
+    .dashboard-card {
+        box-shadow: none;
+
+        border: 1px solid #ddd;
+    }
+
+}
